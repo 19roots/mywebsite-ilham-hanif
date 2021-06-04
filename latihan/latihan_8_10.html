@@ -1,0 +1,15 @@
+<html>
+<body>
+<p id="demo">Klik uk meng-insert elemen ke array.</p>
+<button onclick="myFunction()">Klik</button>
+<script>
+function myFunction()
+{
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(1,0,"Lemon","Kiwi");
+var x=document.getElementById("demo");
+x.innerHTML=fruits;
+}
+</script>
+</body>
+</html>

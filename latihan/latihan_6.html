@@ -1,0 +1,62 @@
+<html>
+<head>
+ <title>Tugas pertemuan 6</title>
+
+  <style>
+   body{
+    background: rgb(2,0,36);
+background: linear-gradient(to bottom, #0477c2 0%,rgba(0,212,255,1) 100%);
+    text-align: center;
+    margin: 10%;
+   }
+   p#grade_out{
+    font-weight: bold;
+   }
+  </style>
+
+ </head>
+<body> 
+ <div>
+ <form action="#" id="myform">
+  Nama <input type="text" id="nama"><br><br>
+  Nilai <input type="text" id="nilai"><br><br>
+  
+  <input type="button" onclick="data()" value="simpan">
+  <input type="reset" value="reset"><br><br>
+
+<!-- output -->
+  <p id="nama_out"></p>
+  <p id="nilai_out"></p>
+  <p id="grade_out"></p>
+ </form>
+ <br><br>
+
+ <script>
+function data(){
+	var nama = document.getElementById('nama').value;
+	var nilai = document.getElementById('nilai').value;
+	var grade;
+	
+	if(nilai>=70 && nilai<80){
+		grade = "B"; 
+	}else if(nilai>=80){
+		grade = "A"; 
+	}else if(nilai>=60 && nilai<70){
+		grade = "C"; 
+	}else if(nilai<60 ){
+		grade = "D"; 
+	}else{
+		grade = "Not Found";
+	}
+
+
+/*output*/
+   document.getElementById("nama_out").innerHTML="Nama : "+nama;
+   document.getElementById("nilai_out").innerHTML="Nilai : "+nilai;
+   document.getElementById("grade_out").innerHTML="Grade : "+grade;
+
+}
+ </script>
+ </div>
+</body>
+</html>

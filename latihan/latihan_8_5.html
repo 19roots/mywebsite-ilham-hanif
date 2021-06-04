@@ -1,0 +1,15 @@
+<html>
+<body>
+<p id="demo">Klik utk menghilangkan array element terakhir.</p>
+<button onclick="myFunction()">Klik</button>
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+function myFunction()
+{
+fruits.pop();
+var x=document.getElementById("demo");
+x.innerHTML=fruits;
+}
+</script>
+</body>
+</html>

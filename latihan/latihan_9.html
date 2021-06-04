@@ -1,0 +1,13 @@
+<FORM NAME = "form1" METHOD = "POST">
+Masukkan Password 1: <INPUT TYPE = "PASSWORD" NAME = "pass1"> <br>
+Masukkan Password 2: <INPUT TYPE = "PASSWORD" NAME = "pass2"> <br>
+<INPUT TYPE = "BUTTON" NAME = "proses" VALUE = "Proses" onClick ="cekPass()">
+</FORM>
+<SCRIPT>
+function cekPass() {
+if (document.form1.pass1.value != document.form1.pass2.value)
+alert('password1 dan password2 yang dimasukkan tidak sama'); 
+else
+window.location.href = "dashboard.htm";
+}
+</SCRIPT>
