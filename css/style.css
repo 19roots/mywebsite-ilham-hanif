@@ -356,3 +356,7 @@ select {
     padding: 5px;
     font-weight: 700;
 }
+
+.contact-section .statusMsg{font-size:18px;}
+.contact-section .succdiv{color: #008000;}
+.contact-section .errordiv{color:#E80000;}

@@ -60,9 +60,9 @@
         <div class="footer-top">
             <h1>Social Media</h1>
             <div class="social-media">
-                <a href="#"><i class="fa fa-telegram fa-lg" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+                <a href="https://t.me/ilhamhanif07"><i class="fa fa-telegram fa-lg" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/ilham.hanif.19"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/ilhamhanif1707"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
             </div>
         </div>
         <div class="footer">

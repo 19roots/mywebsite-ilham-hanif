@@ -9,7 +9,7 @@
     }else{
         ?>
             <div class="links">
-                <a href="https://github.com">Link here</a>
+                <a href="https://github.com/19roots/mywebsite-ilham-hanif">Link here</a>
             </div>
         <?php
     }
