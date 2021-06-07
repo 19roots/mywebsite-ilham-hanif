@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+require "config/functions.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +25,17 @@
                 <li><a href="?page=profile">Profile</a></li>
                 <li><a href="?page=tugas">Tugas</a></li>
                 <li><a href="?page=contact">Contact me</a></li>
-                <li><a href="?page=sc">Source Code</a></li>
+                <?php                
+                if(isset($_SESSION["login"])){
+                    echo "<li><a href='?page=pesan'>Data Pesan</a></li>
+                    <li><a href='?page=sc'>Source Code</a></li>
+                    <li style='padding-left: 35%'><a style='color: red; font-style: italic' href='?page=logout'>Logout</a></li>";
+                }else{
+                    echo "<li><a href='?page=signup'>Daftar</a></li>
+                    <li><a href='?page=login'>Masuk</a></li>";
+                }
+                ?>
+                
             </ul>
         </div>
         <div class="hero"></div>
@@ -45,6 +62,22 @@
 
                     case 'sc':
                         include "page/sc.php";
+                        break;
+
+                    case 'signup':
+                        include "page/signup.php";
+                        break;
+
+                    case 'login':
+                        include "page/login.php";
+                        break;
+
+                    case 'pesan':
+                        include "page/pesan.php";
+                        break;
+
+                    case 'logout':
+                        include "page/logout.php";
                         break;
 
                     default:

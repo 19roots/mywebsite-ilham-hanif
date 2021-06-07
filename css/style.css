@@ -224,9 +224,9 @@ body {
     font: 12px/18px arial bold;
 }
 
-/* Style Contact*/
+/* Style Form contact, login, signup*/
 
-.contact-section h1{
+.form-section h1{
     font-size: 38px;
     text-align: center;
     font-weight: bold;
@@ -241,14 +241,14 @@ body {
     padding: 0 0;
 }
 
-.contact-form {
+.form {
     max-width: 600px;
     margin: auto;
     padding: 0 10px;
     overflow: hidden;
 }
 
-.contact-form-text {
+.form-text {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: block;
     width: 100%;
@@ -262,16 +262,16 @@ body {
     transition: 1s;
 }
 
-.contact-form-text:focus {
+.form-text:focus {
     box-shadow: 0 0 9px 3px #34495a;
 }
 
-textarea.contact-form-text{
+textarea.form-text{
     resize: none;
     height: 200px;
 }
 
-.contact-form-btn {
+.form-btn {
     float: right;
     border: 0;
     background: #20496b;
@@ -282,7 +282,7 @@ textarea.contact-form-text{
     transition: 1s;
 }
 
-.contact-form-btn:hover {
+.form-btn:hover {
     background: #2980a9;
 }
 
@@ -357,6 +357,6 @@ select {
     font-weight: 700;
 }
 
-.contact-section .statusMsg{font-size:18px;}
-.contact-section .succdiv{color: #008000;}
-.contact-section .errordiv{color:#E80000;}
+.form-section .statusMsg{font-size:18px; font-style: italic;}
+.form-section .succdiv{color: #008000;}
+.form-section .errordiv{color:#E80000;}

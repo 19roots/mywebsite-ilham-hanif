@@ -1,4 +1,3 @@
-
 <?php
 $statusMsg = '';
 $msgClass = '';
@@ -8,6 +7,16 @@ if(isset($_POST['submit'])){
     $nama = $_POST['nama'];
     $subjek = $_POST['subjek'];
     $pesan = $_POST['pesan'];
+
+    if(isset($_POST["submit"])) {
+        if(add_message($_POST) > 0) {
+            $statusMsg = 'Pesan Anda sudah terkirim dengan sukses !';
+            $msgClass = 'succdiv';
+        }else {
+            $statusMsg = 'Maaf pesan Anda gagal terkirim, silahkan ulangi lagi.';
+            $msgClass = 'errordiv';
+        }
+    }
     
     if(!empty($email) && !empty($nama) && !empty($subjek) && !empty($pesan)){
         
@@ -43,17 +52,17 @@ if(isset($_POST['submit'])){
 }
 ?>
 
-<div class="contact-section">
+<div class="form-section">
     <h1>Contact Me</h1>
     <div class="border"></div>
-    <form action="" method="post" class="contact-form">
+    <form action="" method="post" class="form">
         <?php if(!empty($statusMsg)){ ?>
                 <p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
         <?php } ?>
-        <input type="text" name="nama" class="contact-form-text" placeholder="Nama" required oninvalid="this.setCustomValidity('Masukan nama anda terlebih dahulu')" oninput="setCustomValidity('')">
-        <input type="email" name="email" class="contact-form-text" placeholder="Email" required oninvalid="this.setCustomValidity('Masukan email anda terlebih dahulu')" oninput="setCustomValidity('')">
-        <input type="text" name="subjek" class="contact-form-text" placeholder="Subjek" required oninvalid="this.setCustomValidity('Masukan subjek terlebih dahulu')" oninput="setCustomValidity('')">
-        <textarea name="pesan" cols="30" rows="10" class="contact-form-text" placeholder="Pesan" required oninvalid="this.setCustomValidity('Masukan pesan anda terlebih dahulu')" oninput="setCustomValidity('')"></textarea>
-        <input type="submit" name="submit" value="Kirim" class="contact-form-btn">
+        <input type="text" name="nama" class="form-text" placeholder="Nama" required oninvalid="this.setCustomValidity('Masukan nama anda terlebih dahulu')" oninput="setCustomValidity('')">
+        <input type="email" name="email" class="form-text" placeholder="Email" required oninvalid="this.setCustomValidity('Masukan email anda terlebih dahulu')" oninput="setCustomValidity('')">
+        <input type="text" name="subjek" class="form-text" placeholder="Subjek" required oninvalid="this.setCustomValidity('Masukan subjek terlebih dahulu')" oninput="setCustomValidity('')">
+        <textarea name="pesan" cols="30" rows="10" class="form-text" placeholder="Pesan" required oninvalid="this.setCustomValidity('Masukan pesan anda terlebih dahulu')" oninput="setCustomValidity('')"></textarea>
+        <input type="submit" name="submit" value="Kirim" class="form-btn">
     </form>
 </div>
